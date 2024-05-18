@@ -21,6 +21,11 @@ public class FahrradControllerTest {
         assertEquals("Trek Emonda", fahrrad.getName());
     }
 
-
+    @Test
+    public void testGetFahrradByIdNotFound() {
+        Fahrrad fahrrad = controller.getFahrradById(100);
+        assertNull(fahrrad);
+    }
+    
 
 }
